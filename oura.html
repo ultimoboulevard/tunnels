@@ -1,5 +1,24 @@
 <!doctype html>
 <meta charset="utf-8">
-<meta http-equiv="refresh" content="0; url=https://coordinate-adventure-candy-editorial.trycloudflare.com">
 <title>oura</title>
-<p>Redirecting to <a href="https://coordinate-adventure-candy-editorial.trycloudflare.com">oura</a>…</p>
+<style>body{font-family:system-ui,sans-serif;max-width:30em;margin:3em auto;padding:0 1em;color:#333}</style>
+<p id="msg">Resolving current URL for <b>oura</b>…</p>
+<noscript>
+  <p>JavaScript is required. Fallback link:
+    <a href="https://principles-talk-car-smart.trycloudflare.com">https://principles-talk-car-smart.trycloudflare.com</a> (may be stale).</p>
+</noscript>
+<script>
+(async () => {
+  try {
+    const r = await fetch("https://raw.githubusercontent.com/ultimoboulevard/tunnels/main/state/oura.json?t=" + Date.now(),
+                          {cache: "no-store"});
+    const j = await r.json();
+    if (j && j.url) { location.replace(j.url); return; }
+    throw new Error("no url in state");
+  } catch (e) {
+    document.getElementById("msg").innerHTML =
+      "Could not fetch current URL (" + e.message + ").<br>" +
+      'Last known: <a href="https://principles-talk-car-smart.trycloudflare.com">https://principles-talk-car-smart.trycloudflare.com</a>';
+  }
+})();
+</script>
