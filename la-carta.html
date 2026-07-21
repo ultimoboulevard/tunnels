@@ -1,0 +1,24 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>la-carta</title>
+<style>body{font-family:system-ui,sans-serif;max-width:30em;margin:3em auto;padding:0 1em;color:#333}</style>
+<p id="msg">Resolving current URL for <b>la-carta</b>…</p>
+<noscript>
+  <p>JavaScript is required. Fallback link:
+    <a href="https://course-tender-converted-webmaster.trycloudflare.com">https://course-tender-converted-webmaster.trycloudflare.com</a> (may be stale).</p>
+</noscript>
+<script>
+(async () => {
+  try {
+    const r = await fetch("https://tunnels-58b.pages.dev/state/la-carta.json?t=" + Date.now(),
+                          {cache: "no-store"});
+    const j = await r.json();
+    if (j && j.url) { location.replace(j.url); return; }
+    throw new Error("no url in state");
+  } catch (e) {
+    document.getElementById("msg").innerHTML =
+      "Could not fetch current URL (" + e.message + ").<br>" +
+      'Last known: <a href="https://course-tender-converted-webmaster.trycloudflare.com">https://course-tender-converted-webmaster.trycloudflare.com</a>';
+  }
+})();
+</script>
